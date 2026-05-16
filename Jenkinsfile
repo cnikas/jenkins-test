@@ -1,10 +1,9 @@
-/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { dockerContainer { image 'maven:3.9.15-eclipse-temurin-21-alpine' } }
+    agent any 
     stages {
-        stage('build') {
+        stage('Stage 1') {
             steps {
-                sh 'mvn --version'
+                echo 'Hello world!' 
             }
         }
     }
